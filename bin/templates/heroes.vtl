@@ -1,0 +1,17 @@
+<div class="row">
+<h1 class="text-center">YOUR TEAM</h1>
+#if($heroes)
+
+#foreach($hero in $heroes)
+<div class="col-md-4 well">
+
+<img src="$hero.getImage()" class="img-responsive"/>
+
+<a href="/heroes/$hero.getId()"><h3>$hero.getName()</h3></a>
+</div>
+#end
+
+#else
+<h3>No heroes added</h3>
+#end
+</div>
