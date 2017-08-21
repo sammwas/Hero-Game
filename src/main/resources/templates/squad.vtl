@@ -1,1 +1,10 @@
 <h1 class="text-center">$squad.getTitle()</h1>
+#foreach($hero in $squad.getHero())
+<div class="col-md-12 well">
+<h1 class="text-center">$hero.getName()</h1>
+<img src="$hero.getImage" class="img-responsive"/>
+</div>
+#end
+
+<a href="/squads/$squad.getId()/heroes/new">Add A Hero</a>
+<a href="/squads">All Squads</a>
