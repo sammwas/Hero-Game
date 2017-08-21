@@ -31,10 +31,9 @@ public static Squad find(int id) {
 public List<Hero> getHero(){
         return mHero;
 }
-
 public void addHero(Hero hero){
-  //that instance is then added to the array using the add()
   mHero.add(hero);
 }
 
 }
+
