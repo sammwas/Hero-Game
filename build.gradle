@@ -5,6 +5,7 @@ archivesBaseName = "to-do"
 version = '1.0'
 mainClassName = "App"
 
+
 repositories {
   mavenCentral()
 }
