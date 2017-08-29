@@ -24,11 +24,7 @@ public class SquadTest{
     Squad.clear();
     assertEquals(Squad.all().size(),0);
   }
-  @Test
-  public void getId_categoriesInstantiateWithAnId_1(){
-    Squad firstSquad=new Squad("justice league");
-    assertEquals(1,firstSquad.getId());
-  }
+ 
   @Test
   public void find_returnsSquadWithSameId_secondSquad(){
     Squad firstSquad=new Squad("justice league");
@@ -44,7 +40,7 @@ public class SquadTest{
   @Test
   public void addHero_addsHeroesToList_true(){
     Squad mySquad=new Squad("justice league");
-    Hero myHero=new Hero("batman");
+    Hero myHero=new Hero("batman","flying","daylight","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxKibfhDjqRIcpF7dRMWo6wm8E8keFh_Kc_BTneO9l7ZcYuhRdtQ");
     mySquad.addHero(myHero);
     assertTrue(mySquad.getHero().contains(myHero));
   }

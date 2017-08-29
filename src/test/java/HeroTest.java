@@ -7,47 +7,47 @@ import static org.junit.Assert.*;
 public class HeroTest {
     @Test
     public void Hero_instantiatesCorrectly_true(){
-      Hero myHero=new Hero("batman");
+      Hero myHero=new Hero("batman","flying","daylight","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxKibfhDjqRIcpF7dRMWo6wm8E8keFh_Kc_BTneO9l7ZcYuhRdtQ");
       assertEquals(true, myHero instanceof Hero);
     }
     @Test
     public void Hero_instantiatesWithName_String(){
-      Hero myHero =new Hero("batman");
+      Hero myHero =new Hero("batman","flying","daylight","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxKibfhDjqRIcpF7dRMWo6wm8E8keFh_Kc_BTneO9l7ZcYuhRdtQ");
       assertEquals("batman", myHero.getName());
     }
     @Test
     public void Hero_instantiatesWithPower_String(){
-      Hero myHero =new Hero("being rich");
+      Hero myHero =new Hero("batman","being rich","daylight","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxKibfhDjqRIcpF7dRMWo6wm8E8keFh_Kc_BTneO9l7ZcYuhRdtQ");
       assertEquals("being rich", myHero.getPower());
     }
     @Test
     public void Hero_instantiatesWithWeakness_String(){
-      Hero myHero=new Hero("none");
+      Hero myHero=new Hero("batman","flying","none","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxKibfhDjqRIcpF7dRMWo6wm8E8keFh_Kc_BTneO9l7ZcYuhRdtQ");
       assertEquals("none",myHero.getWeakness());
     }
     @Test
     public void Hero_returnsAllInstances_true(){
-      Hero firstHero=new Hero("batman");
-      Hero secondHero=new Hero("superman");
+      Hero firstHero=new Hero("batman","flying","daylight","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxKibfhDjqRIcpF7dRMWo6wm8E8keFh_Kc_BTneO9l7ZcYuhRdtQ");
+      Hero secondHero=new Hero("superman","strong","kryptonite","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_pA27ZeKcf40terw7dhmUFpd2gPUtn_CRDodO5NIknkQDnOYNuQ");
       assertEquals(true,Hero.all().contains(firstHero));
       assertEquals(true,Hero.all().contains(secondHero));
     }
     @Test
     public void clear_emptiesAllHeroesFromArrayList_0(){
-      Hero firstHero=new Hero("batman");
+      Hero firstHero=new Hero("batman","flying","daylight","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxKibfhDjqRIcpF7dRMWo6wm8E8keFh_Kc_BTneO9l7ZcYuhRdtQ");
       Hero.clear();
       assertEquals(Hero.all().size(),0);
     }
     @Test
     public void  getId_heroesInstantiateWithAnID_1(){
       Hero.clear();//clear the arraylist of objects made by other tests
-      Hero firstHero=new Hero("batman");
+      Hero firstHero=new Hero("batman","flying","daylight","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxKibfhDjqRIcpF7dRMWo6wm8E8keFh_Kc_BTneO9l7ZcYuhRdtQ");
       assertEquals(1,firstHero.getId());
     }
     @Test
     public void find_returnsHeroWithSameId_secondHero(){
-      Hero firstHero=new Hero("batman");
-      Hero secondHero=new Hero("superman");
+      Hero firstHero=new Hero("batman","flying","daylight","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxKibfhDjqRIcpF7dRMWo6wm8E8keFh_Kc_BTneO9l7ZcYuhRdtQ");
+      Hero secondHero=new Hero("superman","strong","kryptonite","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_pA27ZeKcf40terw7dhmUFpd2gPUtn_CRDodO5NIknkQDnOYNuQ");
       assertEquals(Hero.find(secondHero.getId()),secondHero);
 
     }
